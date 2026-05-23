@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лента времени · Современная Россия, 1991–2022</title>
+  <meta name="description" content="Интерактивная лента ключевых событий современной истории Российской Федерации, 1991–2022. Учебный проект.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.0/dist/fonts/geist-sans/style.css">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <header class="hero">
+    <div class="hero__topbar">
+      <p class="hero__eyebrow">История России · Кузьмин Родион</p>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Переключить тему">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <span>Тема</span>
+      </button>
+    </div>
+    <div class="hero__inner">
+      <h1 class="hero__title">Лента времени</h1>
+      <p class="hero__subtitle">Современная Россия · 1991 — 2022</p>
+      <p class="hero__lede">
+        Восемнадцать ключевых событий, определивших облик Российской Федерации
+        за три десятилетия: от Беловежских соглашений до санкционной эпохи.
+      </p>
+      <div class="hero__meta">
+        <span>18 событий</span>
+        <span>·</span>
+        <span>4 эпохи</span>
+        <span>·</span>
+        <span>5 сфер</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="era-nav" id="era-nav" aria-label="Навигация по эпохам">
+    <div class="era-nav__inner">
+      <a href="#era-yeltsin" class="era-nav__item" data-era="yeltsin">
+        <span class="era-nav__label">Эпоха Ельцина</span>
+        <span class="era-nav__years">1991–1999</span>
+      </a>
+      <a href="#era-stability" class="era-nav__item" data-era="stability">
+        <span class="era-nav__label">Стабилизация</span>
+        <span class="era-nav__years">2000–2007</span>
+      </a>
+      <a href="#era-modernization" class="era-nav__item" data-era="modernization">
+        <span class="era-nav__label">Модернизация</span>
+        <span class="era-nav__years">2008–2013</span>
+      </a>
+      <a href="#era-new-reality" class="era-nav__item" data-era="new-reality">
+        <span class="era-nav__label">Новая реальность</span>
+        <span class="era-nav__years">2014–2022</span>
+      </a>
+    </div>
+  </nav>
+
+  <section class="filters" aria-label="Фильтр по сферам">
+    <div class="filters__inner">
+      <span class="filters__label">Сфера:</span>
+      <div class="filters__chips" id="category-filters">
+        <button type="button" class="chip chip--active" data-category="all">Все</button>
+        <button type="button" class="chip" data-category="politics"><span class="chip__dot" style="background:#8b2a2a"></span>Политика</button>
+        <button type="button" class="chip" data-category="economy"><span class="chip__dot" style="background:#1f6f4a"></span>Экономика</button>
+        <button type="button" class="chip" data-category="foreign"><span class="chip__dot" style="background:#3b3b6d"></span>Внешняя политика</button>
+        <button type="button" class="chip" data-category="culture"><span class="chip__dot" style="background:#b8862a"></span>Культура и спорт</button>
+        <button type="button" class="chip" data-category="social"><span class="chip__dot" style="background:#a6531c"></span>Социальная сфера</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="timeline" id="timeline" aria-label="Лента событий">
+    <!-- События рендерятся через script.js -->
+  </main>
+
+  <section class="bibliography" id="bibliography" aria-label="Библиография">
+    <div class="bibliography__inner">
+      <h2 class="section-title">Источники и литература</h2>
+      <p class="bibliography__note">
+        В проекте использовано более 70 источников пяти типов. Ниже — сводная библиография
+        ключевых работ. Источники по конкретному событию указаны внутри каждой карточки ленты.
+      </p>
+
+      <div class="bibliography__cols">
+        <div>
+          <h3 class="bibliography__group">Монографии и исследования</h3>
+          <ol class="bibliography__list">
+            <li>Гайдар Е. Т. Гибель империи. Уроки для современной России. — М.: РОССПЭН, 2006.</li>
+            <li>Пихоя Р. Г. Москва. Кремль. Власть. Две истории одной страны. — М.: РАГС, 2007.</li>
+            <li>Шевцова Л. Ф. Режим Бориса Ельцина. — М.: РОССПЭН, 1999.</li>
+            <li>Аслунд А. Россия: рождение рыночной экономики. — М.: Республика, 1996.</li>
+            <li>Тренин Д. В. Новый баланс сил. — М.: Альпина Паблишер, 2021.</li>
+            <li>Гельман В. Я. Из огня да в полымя: российская политика после СССР. — СПб.: ЕУСПб, 2013.</li>
+            <li>Авакьян С. А. Конституционное право России. — М.: Норма, 2014.</li>
+            <li>Treisman D. The New Autocracy: Information, Politics, and Policy in Putin's Russia. — Brookings, 2018.</li>
+          </ol>
+        </div>
+
+        <div>
+          <h3 class="bibliography__group">Мемуары и интервью</h3>
+          <ol class="bibliography__list">
+            <li>Ельцин Б. Н. Президентский марафон. — М.: АСТ, 2000.</li>
+            <li>Путин В. В., Геворкян Н., Тимакова Н., Колесников А. От первого лица. — М.: Вагриус, 2000.</li>
+            <li>Гайдар Е. Т. Дни поражений и побед. — М.: Вагриус, 1996.</li>
+            <li>Примаков Е. М. Восемь месяцев плюс… — М.: Мысль, 2001.</li>
+            <li>Шушкевич С. С. Моя жизнь, крушение и воскрешение СССР. — М.: РОССПЭН, 2012.</li>
+            <li>Колесников А. Я. Путин. Прораб на галерах. — М.: Эксмо, 2008.</li>
+          </ol>
+        </div>
+
+        <div>
+          <h3 class="bibliography__group">Документальные фильмы</h3>
+          <ol class="bibliography__list">
+            <li>Парфёнов Л. Намедни. Наша эра, 1991–2003 (телепроект НТВ; продолжение на YouTube).</li>
+            <li>BBC. The Fall of the Soviet Union (2011).</li>
+            <li>«Зима, уходи!» — реж. М. Разбежкина и др. (2012).</li>
+            <li>«Крым. Путь на Родину» (2015, Россия 1).</li>
+            <li>«Икар» (Icarus) — реж. Б. Фогель, Netflix (2017).</li>
+          </ol>
+        </div>
+
+        <div>
+          <h3 class="bibliography__group">Научные журналы и статьи</h3>
+          <ol class="bibliography__list">
+            <li>«Вопросы экономики», 1998–2009 (статьи А. Илларионова, А. Кудрина).</li>
+            <li>«Вопросы истории» — выпуски по новейшей истории России.</li>
+            <li>«Pro et Contra» (Московский Центр Карнеги, 2000-е).</li>
+            <li>Гинцбург А. Л. и др. Safety and efficacy of an rAd26 and rAd5 vector-based COVID-19 vaccine // The Lancet, 2021, vol. 397.</li>
+            <li>МВФ. World Economic Outlook, выпуски 2009 и 2020 годов.</li>
+          </ol>
+        </div>
+
+        <div>
+          <h3 class="bibliography__group">Официальные источники и архивы</h3>
+          <ol class="bibliography__list">
+            <li>Конституция Российской Федерации // constitution.ru, pravo.gov.ru.</li>
+            <li>Указы Президента РФ и федеральные законы — официальный портал pravo.gov.ru.</li>
+            <li>Сайт Президента России — kremlin.ru (обращения, послания, стенограммы).</li>
+            <li>Центральная избирательная комиссия РФ — cikrf.ru.</li>
+            <li>Росстат — gks.ru / rosstat.gov.ru (макроэкономические показатели, демография).</li>
+            <li>Банк России — cbr.ru (доклады о денежно-кредитной политике).</li>
+            <li>Резолюции Генеральной Ассамблеи ООН (un.org/ga).</li>
+            <li>Tagliavini H. Independent International Fact-Finding Mission on the Conflict in Georgia. — EU, 2009.</li>
+            <li>McLaren R. Independent Investigation Report. — WADA, 2016.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__credit">ВШЭ. Куратор: Медакин Сергей. 2 курс 4 модуль. 2026</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="to-top" type="button" aria-label="Наверх">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="data/events.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
